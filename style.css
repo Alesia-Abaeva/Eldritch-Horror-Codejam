@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800&family=Rubik+Dirt&display=swap');
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ancients-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.ancient-card{
+    width: 200px;
+    height: 260px;
+    cursor: pointer;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+.ancient-card.active{
+    border: 2px solid red;
+}
+
+#azathoth{
+    /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b6bf0881785109.5d09f653bf297.jpg"); */
+   background-image: url("/ancient/azatot.png");
+}
+
+#yog-sothoth{
+    background-image: url("/ancient/yog-sothoth-1.png");
+}
+
+#shub-niggurath{
+    background-image: url("/ancient/shub-niggurath.png");
+}
+#hulty{
+    background-image: url("/ancient/hulty.png");
+    background-color: cadetblue;
+}
+
+
+
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 100vh; */
+    justify-content: center;
+    /* font-family: 'Rubik Dirt', cursive; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.difficulty{
+    border: 2px solid cadetblue;
+    background-color: cadetblue;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* C:\Users\Administrator.DESKTOP-C87CPRE\Documents\rsSchool\Eldritch-Horror-Codejam\ancient\azatot.png
+ancient\azatot.png
+
+Шуб-Нитурат
+Азатот
+Кхултуху
+Йог-Сотог */
+
+.card-container{
+    width: 25%;
+}
