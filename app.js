@@ -282,7 +282,7 @@ function nextCards(arr, elem){
     } 
 
 
-        lastCard.style.backgroundImage = `url(/MythicCards/${arrCards[counterCards].color}/${arrCards[counterCards].id}.png)`
+        lastCard.style.backgroundImage = `url(./MythicCards/${arrCards[counterCards].color}/${arrCards[counterCards].id}.png)`
         document.getElementById(`${arrCards[counterCards].color}${stage}`).textContent = +document.getElementById(`${arrCards[counterCards].color}${stage}`).textContent -1
 
 
