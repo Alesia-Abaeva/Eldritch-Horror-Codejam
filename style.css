@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800&family=Rubik+Dirt&display=swap');
+/* @import url('https://allfont.ru/allfont.css?fonts=cold-night-for-alligators'); */
+
+@font-face {
+    font-family: 'Keysr-400';
+    src: url("/fonts/keyes.ttf"); /* Путь к файлу со шрифтом */
+   }
+
+body{
+    background-image: url('/backg/forest.jpg');
+    /* background-color: rgba(133, 126, 116, 0.186); */
+    /* background-position: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -23,59 +39,356 @@
     box-sizing: border-box;
 }
 
-.ancient-card.active{
-    border: 2px solid red;
-}
+
 
 #azathoth{
     /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b6bf0881785109.5d09f653bf297.jpg"); */
    background-image: url("/ancient/azatot.png");
+   background-color: rgba(95, 158, 160, 0.447);
+   /* border-radius: 13px; */
 }
 
-#yog-sothoth{
-    background-image: url("/ancient/yog-sothoth-1.png");
+#azathoth:hover{
+   /* background-color: rgba(34, 59, 60, 0.608); */   
+    background-color: rgba(118, 205, 208, 0.608);
+    transition: background-color 1s ease-in-out;  
 }
 
-#shub-niggurath{
+
+#azathoth:not(:hover){
+   transition: background-color 1s ease-in-out;  
+}
+
+
+#iogSothoth{
+    background-image: url("/ancient/yog-sothoth.png");
+    background-color: rgba(95, 158, 160, 0.447);
+}
+
+#iogSothoth:hover{
+    background-color: rgba(118, 205, 208, 0.608);
+    transition: background-color 1s ease-in-out; 
+}
+#iogSothoth:not(:hover){
+    /* background-color: rgba(34, 59, 60, 0.608); */
+    transition: background-color 1s ease-in-out; 
+}
+
+
+
+#shubNiggurath{
     background-image: url("/ancient/shub-niggurath.png");
+    background-color: rgba(95, 158, 160, 0.447);
 }
-#hulty{
+#shubNiggurath:hover{
+    background-color: rgba(118, 205, 208, 0.608);
+    transition: background-color 1s ease-in-out; 
+}
+#shubNiggurath:not(:hover){
+    /* background-color: rgba(34, 59, 60, 0.608); */
+    transition: background-color 1s ease-in-out; 
+}
+
+#cthulhu{
     background-image: url("/ancient/hulty.png");
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.447);
+}
+#cthulhu:hover{
+    background-color: rgba(118, 205, 208, 0.608);
+    transition: background-color 1s ease-in-out; 
+}
+#cthulhu:not(:hover){
+    /* background-color: rgba(34, 59, 60, 0.608); */
+    transition: background-color 1s ease-in-out; 
 }
 
 
 
 
 .difficulty-container {
+    width: 12%;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* height: 100vh; */
     justify-content: center;
-    /* font-family: 'Rubik Dirt', cursive; */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Keysr-400';
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s, visibility 1s linear 2s;
+
 }
 
 .difficulty{
-    border: 2px solid cadetblue;
-    background-color: cadetblue;
+    display: flex;
+    width: 100%;
     box-sizing: border-box;
     color: black;
-    cursor: pointer;
+    cursor: pointer;  
+    text-align: center;    
+}
+
+.shuffle-button{
+    width: 100%; 
+    box-sizing: border-box;
     padding: 5px;
     text-align: center;
-    border-radius: 15px;
+    font-family: 'Srtanger-N', sans-serif;
+    margin-bottom: 20px;
 }
 
-/* C:\Users\Administrator.DESKTOP-C87CPRE\Documents\rsSchool\Eldritch-Horror-Codejam\ancient\azatot.png
-ancient\azatot.png
 
-Шуб-Нитурат
-Азатот
-Кхултуху
-Йог-Сотог */
 
-.card-container{
-    width: 25%;
+.count-container{
+    width: auto;
+    font-family: 'Keysr-400';
+    text-align: center;
+    visibility: hidden;      
+    opacity: 0;
+    transition: opacity 2s, visibility 1s linear 2s;
+
 }
+
+.stage-container{
+    margin-bottom: 5px;
+    background-color: rgba(95, 158, 160, 0.447);
+}
+
+.stage-text {
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    /* margin-block-start: 1em; */
+    font-weight: bold;
+}
+
+.dots-container{
+    display: flex;
+    margin-bottom: 5px;
+    /* color: #fff; */
+}
+
+.dot{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    font-family: 'Keysr-400';
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+
+.green{  background-image: url("/card/green.png"); 
+
+
+}
+
+.brown{  background-image: url("/card/brown.png"); 
+
+
+}
+
+.blue{  background-image: url("/card/blue.png"); 
+
+
+}
+
+
+.cards-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* visibility: hidden;  */
+    visibility: hidden;      
+    opacity: 0;
+    transition: opacity 2s, visibility 1s linear 2s;  
+}
+
+.deck {
+    background-image: url("/card/card-1.jpg"); 
+    width: 250px;
+    height: 300px;
+    cursor: pointer;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+.last-card{
+    width: 250px;
+    height: 300px;
+    cursor: pointer;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+
+}
+
+
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+  .shuffle {
+      padding: 10px;
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.988);
+      background: rgba(95, 158, 160, 0.447);;
+      border: 2px solid rgb(136, 229, 232);
+      box-shadow: 5px 5px 0 rgb(34, 59, 60),
+          -5px -5px 0 rgb(34, 59, 60),
+          -5px 5px 0 rgb(34, 59, 60),
+          5px -5px 0 rgb(34, 59, 60);
+      /* transition: 500ms ease-in-out; */
+    font-family: 'Keysr-400';
+    visibility: hidden;      
+    opacity: 0;
+    transition: opacity 2s, visibility 1s linear 2s, 500ms ease-in-out;
+
+  }
+  
+  .shuffle:hover {
+      box-shadow: 20px 5px 0 rgb(136, 229, 232), -20px -5px 0 rgb(136, 229, 232);
+  }
+  /* background-color: rgba(95, 158, 160, 0.447); */
+  
+  .shuffle:focus {
+      outline: none;
+  }
+
+
+  .difficulty {
+   background:  rgba(136, 229, 232, 0.384);  
+   color: #fff;
+   line-height: 42px;
+   padding: 0;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   position: relative;
+   
+ }
+ .difficulty span {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+ .difficulty:before,
+ .difficulty:after {
+   position: absolute;
+   content: "";
+   height: 0%;
+   width: 2px;
+   background: rgb(136, 229, 232);
+ }
+ .difficulty:before {
+   right: 0;
+   top: 0;
+   transition: all 500ms ease;
+ }
+ .difficulty:after {
+   left: 0;
+   bottom: 0;
+   transition: all 500ms ease;
+ }
+ .difficulty:hover{
+   color: rgb(136, 229, 232);
+   background: transparent;
+ }
+ .difficulty:hover:before {
+   transition: all 500ms ease;
+   height: 100%;
+ }
+ .difficulty:hover:after {
+   transition: all 500ms ease;
+   height: 100%;
+ }
+ .difficulty span:before,
+ .difficulty span:after {
+   position: absolute;
+   content: "";
+   background: rgb(136, 229, 232);
+ }
+ .difficulty span:before {
+   left: 0;
+   top: 0;
+   width: 0%;
+   height: 2px;
+   transition: all 500ms ease;
+ }
+ .difficulty span:after {
+   right: 0;
+   bottom: 0;
+   width: 0%;
+   height: 2px;
+   transition: all 500ms ease;
+ }
+ .difficulty span:hover:before {
+   width: 100%;
+ }
+ .difficulty span:hover:after {
+   width: 100%;
+ }
+
+ .difficulty-header{
+    text-align: center;
+    color: #fff;
+ }
+
+
+ .show{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+    /* transition-delay: 0s; */
+}
+
+.ancient-card.active{
+    border: 2px solid rgba(136, 229, 232);
+    background-color:rgba(136, 229, 232, 0.695)!important
+}
+
+.active-dif{
+    /* background-color: none!important; */
+    /* border: 2px solid rgb(136, 229, 232); */
+    background-color: rgba(141, 47, 47, 0.534);
+
+}
+
+
+
+
+
+
+
+
