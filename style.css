@@ -191,7 +191,7 @@ body{
 }
 
 .deck {
-    background-image: url("./card/card-1.jpg"); 
+    background-image: url("./card/cards.png"); 
     width: 250px;
     height: 300px;
     cursor: pointer;
@@ -352,7 +352,7 @@ body{
     background-color:rgba(136, 229, 232, 0.695)!important
 }
 
-.active-dif{background-color: rgba(141, 47, 47, 0.534);}
+.active-dif{background-color: rgba(34, 59, 60, 0.751);}
 
 
 

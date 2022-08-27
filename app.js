@@ -116,9 +116,7 @@ let allcardsArray
      allBlue = firstBlue + secondBlue + thirdBlue
      allGreen = firstGreen + secondGreen + thirdGreen
 
-    console.log(allGreen, allBrown, allBlue)
-
-    
+      
     allColors = {
         allGreen: allGreen,
         allBlue:allBlue,
@@ -257,7 +255,7 @@ let allcardsArray
 
         if(counterCards >= arrCards.length){
             lastCard.style.backgroundImage = `none`
-            
+            return null
         } 
 
 
