@@ -29,7 +29,7 @@ const firstGreenStage = document.getElementById('green1'),
       countContainer = document.querySelector('.count-container'),
       cardsContainer =  document.querySelector('.cards-container')
       
-      
+     
 
       
 
@@ -64,25 +64,10 @@ let allcardsArray
         shuffleButton.addEventListener('click', () =>{
             cardsContainer.classList.add('show')
             getDeskStageCards()
-            
-
-            
-            // по клику здесб будет отражаться стол с картами - ВСЕ!!!!
-            // console.log(desk, 'desk')
         } )
 
         deck.addEventListener('click', () =>{
-            // console.log('кнопочка -хуепочка')
             nextCards(desk)
-            // countsCards(deck)
-            // console.log(colorCards, 'colorCards')
-            // console.log(cachedAncient)
-            // shuffleDesk(arrrr)
-
-            // showCards(arrrr)
-            // shuffleDesk (desk)
-            // по клику здесб будет отражаться стол с картами - ВСЕ!!!!
-            // console.log(desk, 'desk')
         } )
 
 
@@ -92,7 +77,6 @@ let allcardsArray
             shuffleButton.classList.add('show')
 
             difficaltArray.forEach((element, index) => {
-                // const node = document.getElementById(element)
                 const node = document.getElementById(element)
 
 
@@ -146,7 +130,7 @@ let allcardsArray
 }
 
     function getDifficult(difficalt){
-        // console.log(allBlue)
+        
         if(difficalt == 'normal'){
             allcardsArray = [...getDeck(cardsDataBlue, allBlue), ...getDeck(cardsDataGreen, allGreen), ...getDeck(cardsDataBrown, allBrown)]
         }
@@ -187,7 +171,7 @@ let allcardsArray
         return allcardsArray
     }
 
-  // собираем колоду по стейджам
+  // collect the deck by stages
     function getDeskStageCards(){
         cachedAncient 
         console.log(cachedAncient)
@@ -214,7 +198,7 @@ let allcardsArray
 
 
 
-    //порверяем хватает ли кард той или иной сложности для составления колоды, если нет добавляем обычные 
+    //check whether the card has enough complexity to make a deck, if not, add the usual ones
     function chekArray(array, lenghtColors, prototypeArray ){
         if(lenghtColors == array.length){
             return shuffle(array)
@@ -242,11 +226,6 @@ let allcardsArray
         }
 
     }
-    // собрали уникальную колоду, отсортировав по цветам!
-
-
-  
-
 
     function filterArray(array, property, value, lengthNewArray){
         let newArray = []
@@ -260,67 +239,59 @@ let allcardsArray
     }
 
 
-let stage = 1
-let counterCards = -1
-function nextCards(arr, elem){
-    
-    const arrCards = [...arr[0], ...arr[1], ...arr[2]]
-    const lenghtFirst = arr[0].length
-    const lenghtSecond = arr[1].length
-    counterCards++
+    let stage = 1
+    let counterCards = -1
+    function nextCards(arr, elem){
+            
+        const arrCards = [...arr[0], ...arr[1], ...arr[2]]
+        const lenghtFirst = arr[0].length
+        const lenghtSecond = arr[1].length
+        counterCards++
 
-    if(counterCards == lenghtFirst){
-        stage = 2
-    }
-    if(counterCards == (lenghtFirst+lenghtSecond)){
-        stage = 3
-    }
+        if(counterCards == lenghtFirst){
+            stage = 2
+        }
+        if(counterCards == (lenghtFirst+lenghtSecond)){
+            stage = 3
+        }
 
-    if(counterCards >= arrCards.length){
-        lastCard.style.backgroundImage = `none`
+        if(counterCards >= arrCards.length){
+            lastCard.style.backgroundImage = `none`
+            
+        } 
+
+
+            lastCard.style.backgroundImage = `url(./MythicCards/${arrCards[counterCards].color}/${arrCards[counterCards].id}.png)`
+            document.getElementById(`${arrCards[counterCards].color}${stage}`).textContent = +document.getElementById(`${arrCards[counterCards].color}${stage}`).textContent -1
+
+
         
-    } 
 
 
-        lastCard.style.backgroundImage = `url(./MythicCards/${arrCards[counterCards].color}/${arrCards[counterCards].id}.png)`
-        document.getElementById(`${arrCards[counterCards].color}${stage}`).textContent = +document.getElementById(`${arrCards[counterCards].color}${stage}`).textContent -1
-
-
-    
-
-
-    colorCards = arrCards[counterCards].color
-
-    // countsCards(arr,arrCards[counterCards].id)
-    console.log(stage, 'stage')
-
-
-
-
-    return colorCards
-}
+        colorCards = arrCards[counterCards].color
+        return colorCards
+    }
 
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
+      let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
       [array[i], array[j]] = [array[j], array[i]];
     }
-    // console.log(array, '!!!!')
     return array
 }
 
 
 
 
-// генерим рандомный номер
+// generate a random number
 function rundomElementFromArray (array){
     let result = Math.floor(Math.random() * array.length)
     return array[result]
 }
 
 
-// заполняем массив уникальными данными
+// filling the array with unique data
 function getDeck(array, count, color){
     let unic
     let arr = []
@@ -330,20 +301,20 @@ function getDeck(array, count, color){
             unic = true
             result = rundomElementFromArray(array) 
             for(let i = 0; i < arr.length; i++){
-                if(result === arr[i]){  // проверяем был ли такой элемент в массиве
+                if(result === arr[i]){  // check whether there was such an element in the array
                     unic = false;
                     break;
                 }
             }
 
-        } while(!unic) //запускаем заново
+        } while(!unic) //starting again
         arr.push(result)
                 
     }
     return arr
 }
 
-// собирает массив стадий по цвету!
+// collects an array of stages by color
 function splitArrayStadies(array, count){
     let arrayColorblue = getDeck( arrayColors(array, 'blue'), count[2])
     let arrayColorGreen = getDeck(arrayColors(array, 'green'), count[0])  
@@ -356,10 +327,10 @@ function deleteArray(arrayOriginal, arrayСompared){
     arrayOriginal = arrayOriginal.filter(ar => !arrayСompared.find(rm => (rm.id === ar.id) ))
     return arrayOriginal
 }
-// удалять элементы нужно после сортировки массивов! 
 
 
-// сортирует данные по цвету в новый массив, и удаляет данные, из исходного массива
+
+// sorts the data by color into a new array, and deletes the data from the original array
 function arrayColors (array, colorArray){
     let j
     let arrayColor = array.filter((obj) => {

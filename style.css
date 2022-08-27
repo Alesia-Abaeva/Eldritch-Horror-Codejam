@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800&family=Rubik+Dirt&display=swap');
-/* @import url('https://allfont.ru/allfont.css?fonts=cold-night-for-alligators'); */
 
 @font-face {
     font-family: 'Keysr-400';
-    src: url("./fonts/keyes.ttf"); /* Путь к файлу со шрифтом */
+    src: url("./fonts/keyes.ttf"); 
    }
 
 body{
     background-image: url('./backg/forest.jpg');
-    /* background-color: rgba(133, 126, 116, 0.186); */
-    /* background-position: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -41,15 +38,12 @@ body{
 
 
 
-#azathoth{
-    /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b6bf0881785109.5d09f653bf297.jpg"); */
+#azathoth{  
    background-image: url("./ancient/azatot.png");
-   background-color: rgba(95, 158, 160, 0.447);
-   /* border-radius: 13px; */
+   background-color: rgba(95, 158, 160, 0.447);   
 }
 
-#azathoth:hover{
-   /* background-color: rgba(34, 59, 60, 0.608); */   
+#azathoth:hover{    
     background-color: rgba(118, 205, 208, 0.608);
     transition: background-color 1s ease-in-out;  
 }
@@ -69,11 +63,9 @@ body{
     background-color: rgba(118, 205, 208, 0.608);
     transition: background-color 1s ease-in-out; 
 }
-#iogSothoth:not(:hover){
-    /* background-color: rgba(34, 59, 60, 0.608); */
+#iogSothoth:not(:hover){    
     transition: background-color 1s ease-in-out; 
 }
-
 
 
 #shubNiggurath{
@@ -84,8 +76,7 @@ body{
     background-color: rgba(118, 205, 208, 0.608);
     transition: background-color 1s ease-in-out; 
 }
-#shubNiggurath:not(:hover){
-    /* background-color: rgba(34, 59, 60, 0.608); */
+#shubNiggurath:not(:hover){    
     transition: background-color 1s ease-in-out; 
 }
 
@@ -97,12 +88,9 @@ body{
     background-color: rgba(118, 205, 208, 0.608);
     transition: background-color 1s ease-in-out; 
 }
-#cthulhu:not(:hover){
-    /* background-color: rgba(34, 59, 60, 0.608); */
+#cthulhu:not(:hover){    
     transition: background-color 1s ease-in-out; 
 }
-
-
 
 
 .difficulty-container {
@@ -157,15 +145,13 @@ body{
 .stage-text {
     color: #fff;
     display: block;
-    font-size: 1em;
-    /* margin-block-start: 1em; */
+    font-size: 1em;    
     font-weight: bold;
 }
 
 .dots-container{
     display: flex;
     margin-bottom: 5px;
-    /* color: #fff; */
 }
 
 .dot{
@@ -187,20 +173,11 @@ body{
 
 
 
-.green{  background-image: url("./card/green.png"); 
+.green{  background-image: url("./card/green.png");}
 
+.brown{  background-image: url("./card/brown.png");}
 
-}
-
-.brown{  background-image: url("./card/brown.png"); 
-
-
-}
-
-.blue{  background-image: url("./card/blue.png"); 
-
-
-}
+.blue{  background-image: url("./card/blue.png");}
 
 
 .cards-container{
@@ -208,7 +185,6 @@ body{
     width: 100%;
     align-items: center;
     justify-content: center;
-    /* visibility: hidden;  */
     visibility: hidden;      
     opacity: 0;
     transition: opacity 2s, visibility 1s linear 2s;  
@@ -248,7 +224,7 @@ body{
           -webkit-tap-highlight-color: transparent;
   }
   
-  .shuffle {
+.shuffle {
       padding: 10px;
       width: 150px;
       height: 50px;
@@ -262,18 +238,17 @@ body{
           -5px -5px 0 rgb(34, 59, 60),
           -5px 5px 0 rgb(34, 59, 60),
           5px -5px 0 rgb(34, 59, 60);
-      /* transition: 500ms ease-in-out; */
     font-family: 'Keysr-400';
     visibility: hidden;      
     opacity: 0;
     transition: opacity 2s, visibility 1s linear 2s, 500ms ease-in-out;
 
-  }
+}
   
-  .shuffle:hover {
+.shuffle:hover {
       box-shadow: 20px 5px 0 rgb(136, 229, 232), -20px -5px 0 rgb(136, 229, 232);
-  }
-  /* background-color: rgba(95, 158, 160, 0.447); */
+}
+
   
   .shuffle:focus {
       outline: none;
@@ -370,7 +345,6 @@ body{
 .hide{
     opacity: 0;
     visibility: hidden;
-    /* transition-delay: 0s; */
 }
 
 .ancient-card.active{
@@ -378,12 +352,7 @@ body{
     background-color:rgba(136, 229, 232, 0.695)!important
 }
 
-.active-dif{
-    /* background-color: none!important; */
-    /* border: 2px solid rgb(136, 229, 232); */
-    background-color: rgba(141, 47, 47, 0.534);
-
-}
+.active-dif{background-color: rgba(141, 47, 47, 0.534);}
 
 
 
