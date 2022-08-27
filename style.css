@@ -3,11 +3,11 @@
 
 @font-face {
     font-family: 'Keysr-400';
-    src: url("/fonts/keyes.ttf"); /* Путь к файлу со шрифтом */
+    src: url("./fonts/keyes.ttf"); /* Путь к файлу со шрифтом */
    }
 
 body{
-    background-image: url('/backg/forest.jpg');
+    background-image: url('./backg/forest.jpg');
     /* background-color: rgba(133, 126, 116, 0.186); */
     /* background-position: 100%; */
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@ body{
 
 #azathoth{
     /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b6bf0881785109.5d09f653bf297.jpg"); */
-   background-image: url("/ancient/azatot.png");
+   background-image: url("./ancient/azatot.png");
    background-color: rgba(95, 158, 160, 0.447);
    /* border-radius: 13px; */
 }
@@ -61,7 +61,7 @@ body{
 
 
 #iogSothoth{
-    background-image: url("/ancient/yog-sothoth.png");
+    background-image: url("./ancient/yog-sothoth.png");
     background-color: rgba(95, 158, 160, 0.447);
 }
 
@@ -77,7 +77,7 @@ body{
 
 
 #shubNiggurath{
-    background-image: url("/ancient/shub-niggurath.png");
+    background-image: url("./ancient/shub-niggurath.png");
     background-color: rgba(95, 158, 160, 0.447);
 }
 #shubNiggurath:hover{
@@ -90,7 +90,7 @@ body{
 }
 
 #cthulhu{
-    background-image: url("/ancient/hulty.png");
+    background-image: url("./ancient/hulty.png");
     background-color: rgba(95, 158, 160, 0.447);
 }
 #cthulhu:hover{
@@ -187,17 +187,17 @@ body{
 
 
 
-.green{  background-image: url("/card/green.png"); 
+.green{  background-image: url("./card/green.png"); 
 
 
 }
 
-.brown{  background-image: url("/card/brown.png"); 
+.brown{  background-image: url("./card/brown.png"); 
 
 
 }
 
-.blue{  background-image: url("/card/blue.png"); 
+.blue{  background-image: url("./card/blue.png"); 
 
 
 }
@@ -215,7 +215,7 @@ body{
 }
 
 .deck {
-    background-image: url("/card/card-1.jpg"); 
+    background-image: url("./card/card-1.jpg"); 
     width: 250px;
     height: 300px;
     cursor: pointer;
