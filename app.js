@@ -43,6 +43,7 @@ let allBrown
 let allBlue 
 let allGreen 
 let allcardsArray
+let difficalt 
 
 
     ancientsContainer.addEventListener('click', e => {
@@ -63,6 +64,10 @@ let allcardsArray
 
         shuffleButton.addEventListener('click', () =>{
             cardsContainer.classList.add('show')
+            console.log(difficalt)
+
+            getDifficult(difficalt)          
+
             getDeskStageCards()
         } )
 
@@ -81,7 +86,9 @@ let allcardsArray
 
 
                 if(element === target.id){    
-                    getDifficult(element)              
+                    difficalt = element
+                    console.log(difficalt)
+                    // getDifficult(element)              
                 return node.classList.add('active-dif')
 
                 }
