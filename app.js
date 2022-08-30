@@ -255,6 +255,8 @@ let allcardsArray
 
         if(counterCards >= arrCards.length){
             lastCard.style.backgroundImage = `none`
+            // location.reload()
+            reload_interval(2000)
             return null
         } 
 
@@ -340,6 +342,13 @@ function arrayColors (array, colorArray){
     return  arrayColor
 }
 
+
+
+function reload_interval(time){
+	setTimeout(function(){
+		location.reload();
+	}, time);
+}
 
 export {getAncients}
 
