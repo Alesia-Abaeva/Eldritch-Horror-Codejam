@@ -187,12 +187,23 @@ let allcardsArray
         let thirdStageArray = splitArrayStadies( allcardsArray, [thirdGreen, thirdBrown, thirdBlue])
         allcardsArray = deleteArray(allcardsArray, thirdStageArray)
 
-        desk = [firstStageArray, secondStageArray, thirdStageArray]
+        desk = [firstStageArray.sort(compareRandom), secondStageArray.sort(compareRandom), thirdStageArray.sort(compareRandom)]
+        console.log(deck)
      
  
         return desk    
 
     }
+
+    // var arr = [1, 2, 3, 4, 5];
+
+    function compareRandom(a, b) {
+      return Math.random() - 0.5;
+    }
+    
+    // arr.sort(compareRandom);
+    
+    // alert( arr )
 
 
 
